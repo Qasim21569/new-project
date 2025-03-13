@@ -7,31 +7,21 @@ const timelineData = [
     date: "DAY 1",
     keyEvents: [
       { time: "13:00", title: "Reporting and Registration" },
-      { time: "15:00", title: "Briefing on rules, prizes and more" },
-      { time: "17:00", title: "Kickoff (Timer starts, T=0)" },
+      { time: "14:00", title: "Briefing on rules, prizes and more" },
+      { time: "15:00", title: "Kickoff (Timer starts, T=0)" },
       { time: "20:00", title: "Dinner Break (T-Pause)" },
-      { time: "21:00", title: "Resume Project Development (T = 3 hrs)" }
+      { time: "21:00", title: "Resume Project Development (T = 6 hrs)" }
     ]
   },
   {
     date: "DAY 2",
     keyEvents: [
       { time: "08:00", title: "Breakfast (T-Pause)" },
-      { time: "09:00", title: "Resume Project Development (T = 14 hrs)" },
+      { time: "09:00", title: "Resume Project Development (T = 18 hrs)" },
       { time: "13:00", title: "Lunch & Round 1 Judging (T-Pause)" },
-      { time: "15:00", title: "Results Announcement" },
-      { time: "16:00", title: "Round 2 with Top 15 Teams (T = 18 hrs)" },
-      { time: "20:00", title: "Dinner Break (T-Pause)" },
-      { time: "21:00", title: "Resume Project Development (T = 22 hrs)" }
-    ]
-  },
-  {
-    date: "DAY 3",
-    keyEvents: [
-      { time: "08:00", title: "Breakfast (T-Pause)" },
-      { time: "09:00", title: "Resume Final Work (T = 34 hrs)" },
-      { time: "11:00", title: "Final Presentations (T = 36 hrs)" },
-      { time: "13:00", title: "Results" }
+      { time: "14:00", title: "Results Announcement" },
+      { time: "15:00", title: "Final Presentations (T = 24 hrs)" },
+      { time: "16:00", title: "Results & Prize Distribution" }
     ]
   }
 ];
