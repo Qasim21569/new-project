@@ -8,7 +8,7 @@ import Guidelines from './components/Guidelines';
 
 function App() {
   const [timeLeft, setTimeLeft] = useState({
-    days: 15,
+    days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0
@@ -131,11 +131,16 @@ function App() {
         return;
       }
 
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
       setTimeLeft({
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60)
+        days,
+        hours,
+        minutes,
+        seconds
       });
     }, 1000);
 
@@ -443,8 +448,7 @@ function App() {
                 transition={{ delay: 0.6 }}
                 className="text-lg sm:text-xl md:text-2xl text-center max-w-2xl mx-auto text-gray-100 mt-6 font-medium px-4"
               >
-                Join us for an exciting 24-hour hackathon where innovation meets technology. 
-                Build, create, and showcase your skills in this intense coding challenge.
+                A <span className="text-cyan-400 font-bold">24-hour</span> hackathon to forge the future through code and creativity
               </motion.p>
               
               <motion.div
