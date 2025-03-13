@@ -117,12 +117,12 @@ function App() {
   }, [showMainContent]);
 
   useEffect(() => {
-    // Set the target date to March 21st, 2025 at 1 PM
-    const endDate = new Date('2025-03-21T13:00:00');
+    // Set the target date to March 22nd, 2024 at 1 PM
+    const targetDate = new Date('2024-03-22T13:00:00');
 
     const timer = setInterval(() => {
       const now = new Date();
-      const difference = endDate.getTime() - now.getTime();
+      const difference = targetDate.getTime() - now.getTime();
 
       if (difference <= 0) {
         setCountdownComplete(true);
@@ -443,7 +443,8 @@ function App() {
                 transition={{ delay: 0.6 }}
                 className="text-lg sm:text-xl md:text-2xl text-center max-w-2xl mx-auto text-gray-100 mt-6 font-medium px-4"
               >
-                A <span className="text-cyan-400 font-bold">36-hour</span> hackathon to forge the future through code and creativity
+                Join us for an exciting 24-hour hackathon where innovation meets technology. 
+                Build, create, and showcase your skills in this intense coding challenge.
               </motion.p>
               
               <motion.div
@@ -760,7 +761,7 @@ function App() {
                       viewport={{ once: true }}
                       className="text-lg md:text-xl text-gray-100 leading-relaxed mb-6"
                     >
-                      We are excited to present <span className="text-cyan-400 font-bold">AlgoForge</span>, the first-ever hackathon conducted by <span className="text-red-500 font-bold">IEEE-KJSIT Student Chapter</span>. Taking place from <span className="text-cyan-400 font-mono">21/03/2025 - 23/03/2025</span>, this 36-hour intensive competition aims to foster innovation and collaboration by challenging participants to solve real-world problems using a multi-domain approach.
+                      We are excited to present <span className="text-cyan-400 font-bold">AlgoForge</span>, the first-ever hackathon conducted by <span className="text-red-500 font-bold">IEEE-KJSIT Student Chapter</span>. Taking place from <span className="text-cyan-400 font-mono">22/03/2024 - 23/03/2024</span>, this 24-hour intensive competition aims to foster innovation and collaboration by challenging participants to solve real-world problems using a multi-domain approach.
                     </motion.p>
                     
                     <motion.p
@@ -812,7 +813,7 @@ function App() {
                           <Zap className="w-5 h-5 text-red-400" />
                         </div>
                         <div>
-                          <h4 className="text-red-400 font-bold mb-1">36 Hours</h4>
+                          <h4 className="text-red-400 font-bold mb-1">24 Hours</h4>
                           <p className="text-sm text-gray-100">Intensive coding and problem-solving</p>
                         </div>
                       </motion.div>
@@ -900,9 +901,10 @@ function App() {
                           <Sparkles className="w-16 h-16 text-cyan-400 mb-4" />
                         </motion.div>
                         
-                        <h3 className="text-3xl font-bold text-white mb-2 cyberpunk-text">36 Hours</h3>
-                        <div className="w-16 h-1 bg-gradient-to-r from-cyan-500 to-red-500 mb-4"></div>
-                        <p className="text-cyan-300 mb-4">of Innovation</p>
+                        <div className="text-center">
+                          <h3 className="text-2xl font-bold text-white mb-2">22-23 March 2024</h3>
+                          <p className="text-gray-300">24 Hours of Innovation</p>
+                        </div>
                         
                         <motion.div
                           animate={{ 
@@ -916,17 +918,9 @@ function App() {
                         
                         {/* Key dates */}
                         <div className="mt-6 w-full bg-black/50 p-3 rounded-lg border border-cyan-500/30">
-                          <div className="flex justify-between items-center mb-2 text-xs">
-                            <span className="text-gray-100">Registration Opens</span>
-                            <span className="text-cyan-400 font-mono">01/03/2025</span>
-                          </div>
-                          <div className="flex justify-between items-center mb-2 text-xs">
-                            <span className="text-gray-100">Registration Closes</span>
-                            <span className="text-cyan-400 font-mono">18/03/2025</span>
-                          </div>
-                          <div className="flex justify-between items-center text-xs">
-                            <span className="text-gray-100">Event Dates</span>
-                            <span className="text-red-400 font-mono">21-23/03/2025</span>
+                          <div className="text-center">
+                            <h3 className="text-2xl font-bold text-white mb-2">22-23/03/2024</h3>
+                            <p className="text-gray-300">Save the Date</p>
                           </div>
                         </div>
                       </div>
