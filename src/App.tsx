@@ -1077,7 +1077,7 @@ function App() {
           {/* Copyright */}
           <div className="max-w-7xl mx-auto px-4 pt-6 sm:pt-8 mt-6 sm:mt-8 border-t border-gray-800 text-center text-xs sm:text-sm text-gray-400">
             <Terminal className="w-5 h-5 sm:w-6 sm:h-6 mx-auto mb-3 sm:mb-4 text-cyan-400" />
-            <p>© 2024 AlgoForge - All Rights Reserved</p>
+            <p>© 2025 AlgoForge - All Rights Reserved</p>
             <p className="mt-1 sm:mt-2">Designed and Developed by Qasim Kharodia and Aliasghar Masood</p>
           </div>
         </footer>
