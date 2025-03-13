@@ -137,39 +137,41 @@ function App() {
 
   useEffect(() => {
     // Set the target date to March 22nd, 2024 at 1 PM
-    const targetDate = new Date('2024-03-22T13:00:00');
+    const targetDate = new Date('2024-03-22T13:00:00').getTime();
 
-    const calculateTimeLeft = () => {
-      const now = new Date();
-      const difference = targetDate.getTime() - now.getTime();
+    const updateTimer = () => {
+      const now = new Date().getTime();
+      const difference = targetDate - now;
 
-      if (difference > 0) {
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-        setTimeLeft({
-          days,
-          hours,
-          minutes,
-          seconds
-        });
-      } else {
+      if (difference <= 0) {
         setCountdownComplete(true);
-        // Only show popup if user hasn't seen it before
-        const hasSeenPopup = localStorage.getItem('hasSeenHackathonPopup') === 'true';
-        if (!hasSeenPopup) {
-          setShowCompletion(true);
-        }
+        setTimeLeft({
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0
+        });
+        return;
       }
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      setTimeLeft({
+        days,
+        hours,
+        minutes,
+        seconds
+      });
     };
 
-    // Calculate immediately
-    calculateTimeLeft();
+    // Update immediately
+    updateTimer();
 
-    // Then update every second
-    const timer = setInterval(calculateTimeLeft, 1000);
+    // Update every second
+    const timer = setInterval(updateTimer, 1000);
 
     // Intersection Observer for section detection
     const observer = new IntersectionObserver(
