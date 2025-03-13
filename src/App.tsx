@@ -116,6 +116,25 @@ function App() {
     }
   }, [showMainContent]);
 
+  // Add this new useEffect for handling popup state
+  useEffect(() => {
+    const targetDate = new Date('2024-03-22T13:00:00');
+    const now = new Date();
+    const hasHackathonStarted = now >= targetDate;
+    const hasSeenPopup = localStorage.getItem('hasSeenHackathonPopup') === 'true';
+
+    if (hasHackathonStarted && !hasSeenPopup) {
+      setShowCompletion(true);
+      setCountdownComplete(true);
+    }
+  }, []);
+
+  // Update the popup close handler
+  const handleClosePopup = () => {
+    setShowCompletion(false);
+    localStorage.setItem('hasSeenHackathonPopup', 'true');
+  };
+
   useEffect(() => {
     // Set the target date to March 22nd, 2024 at 1 PM
     const targetDate = new Date('2024-03-22T13:00:00');
@@ -124,7 +143,6 @@ function App() {
       const now = new Date();
       const difference = targetDate.getTime() - now.getTime();
 
-      // If the hackathon hasn't started yet
       if (difference > 0) {
         const days = Math.floor(difference / (1000 * 60 * 60 * 24));
         const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -138,9 +156,12 @@ function App() {
           seconds
         });
       } else {
-        // Only show completion if we're past the start time
         setCountdownComplete(true);
-        setShowCompletion(true);
+        // Only show popup if user hasn't seen it before
+        const hasSeenPopup = localStorage.getItem('hasSeenHackathonPopup') === 'true';
+        if (!hasSeenPopup) {
+          setShowCompletion(true);
+        }
       }
     };
 
@@ -604,7 +625,7 @@ function App() {
               className="text-center relative"
             >
               <button
-                onClick={() => setShowCompletion(false)}
+                onClick={handleClosePopup}
                 className="absolute top-4 right-4 text-white hover:text-cyan-400 transition-colors"
               >
                 <X className="w-6 h-6" />
