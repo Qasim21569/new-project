@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Database, Code2, Cpu, Brain, Headset } from 'lucide-react';
+import { Database, Code2, Cpu, Brain, Headset, Chrome } from 'lucide-react';
 
 // Custom icons for tracks
 const DeFiIcon = () => (
@@ -72,6 +72,20 @@ const domains = [
     icon: <Headset className="w-12 h-12" />,
     name: "AR VR",
     color: "from-green-500 to-teal-600"
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" fill="none" strokeWidth="1.5" className="w-12 h-12">
+        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+        <line x1="8" y1="21" x2="16" y2="21" />
+        <line x1="12" y1="17" x2="12" y2="21" />
+        <path d="M6 8h.01M9 8h.01" />
+        <path d="M6 12h12" />
+        <path d="M6 16h12" />
+      </svg>
+    ),
+    name: "Frontend Development",
+    color: "from-yellow-500 to-orange-600"
   }
 ];
 
@@ -228,7 +242,7 @@ export default function Domains() {
           </motion.p>
           
           {/* Domains grid */}
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-3 sm:gap-4 md:gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto">
             {domains.map((domain, index) => (
               <motion.div
                 key={index}
@@ -284,8 +298,8 @@ export default function Domains() {
                   }}
                   transition={{ duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
                 ></motion.div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
           </div>
         </div>
         

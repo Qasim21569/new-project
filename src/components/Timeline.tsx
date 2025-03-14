@@ -4,24 +4,20 @@ import { ChevronRight } from 'lucide-react';
 // Simplified timeline data with complete schedule
 const timelineData = [
   {
-    date: "DAY 1",
+    date: "DAY 1 - 22 March",
     keyEvents: [
-      { time: "13:00", title: "Reporting and Registration" },
-      { time: "14:00", title: "Briefing on rules, prizes and more" },
-      { time: "15:00", title: "Kickoff (Timer starts, T=0)" },
-      { time: "20:00", title: "Dinner Break (T-Pause)" },
-      { time: "21:00", title: "Resume Project Development (T = 6 hrs)" }
+      { time: "09:00", title: "Reporting and inaugural session & overview of rules" },
+      { time: "13:00", title: "Event kickoff (Timer starts)" },
+      { time: "17:00", title: "Refreshment break" },
+      { time: "21:00", title: "Dinner Break" }
     ]
   },
   {
-    date: "DAY 2",
+    date: "DAY 2 - 23 March",
     keyEvents: [
-      { time: "08:00", title: "Breakfast (T-Pause)" },
-      { time: "09:00", title: "Resume Project Development (T = 18 hrs)" },
-      { time: "13:00", title: "Lunch & Round 1 Judging (T-Pause)" },
-      { time: "14:00", title: "Results Announcement" },
-      { time: "15:00", title: "Final Presentations (T = 24 hrs)" },
-      { time: "16:00", title: "Results & Prize Distribution" }
+      { time: "08:00", title: "Breakfast break" },
+      { time: "13:00", title: "Lunch and final presentations commence(24 hours completed)" },
+      { time: "18:00", title: "Announcement of results" }
     ]
   }
 ];
