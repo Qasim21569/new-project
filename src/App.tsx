@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
-import { Terminal, Rocket, Sparkles, X, ChevronDown, Code, Zap, Award, ArrowRight, ExternalLink, Github } from 'lucide-react';
+import { Terminal, Rocket, Sparkles, X, ChevronDown, Code, Zap, Award, ArrowRight, ExternalLink, Github, Chrome } from 'lucide-react';
 import Background from './components/Background';
 import Timeline from './components/Timeline';
 import Domains from './components/Domains';
@@ -261,18 +261,10 @@ function App() {
         >
           <div className="relative">
             <motion.img
-              src="https://upload.wikimedia.org/wikipedia/commons/2/21/IEEE_logo.svg"
+              src="/IEEE NEW LOGO white v2.png"
               alt="IEEE Logo"
-              className="w-40 md:w-64 mb-8 invert relative z-10"
+              className="w-40 md:w-64 mb-8 relative z-10"
             />
-            <motion.div 
-              className="absolute -inset-8 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 blur-xl rounded-full z-0"
-              animate={{ 
-                opacity: [0.3, 0.6, 0.3],
-                scale: [0.9, 1.1, 0.9]
-              }}
-              transition={{ duration: 4, repeat: Infinity }}
-            ></motion.div>
           </div>
 
           <motion.div
@@ -487,9 +479,12 @@ function App() {
                 transition={{ delay: 0.8 }}
                 className="flex flex-wrap justify-center gap-4 mt-8"
               >
-                <motion.button
+                <motion.a
+                  href="https://forms.gle/2dBn4k3nFoYd6z8Y6"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+                  whileTap={{ scale: 0.95 }}
                   className="bg-gradient-to-r from-red-500 to-red-600 text-white px-8 md:px-12 py-3 md:py-4 rounded-md font-bold text-lg md:text-xl
                            transition-all duration-300 flex items-center group relative overflow-hidden"
                 >
@@ -505,7 +500,7 @@ function App() {
                   <motion.div 
                     className="absolute -inset-[100%] top-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-[-20deg] group-hover:animate-shine"
                   ></motion.div>
-        </motion.button>
+                </motion.a>
               </motion.div>
             </motion.div>
           )}
@@ -876,11 +871,11 @@ function App() {
                         className="flex items-start space-x-3 bg-black/50 p-3 rounded-lg border border-purple-500/20"
                       >
                         <div className="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center">
-                          <Github className="w-5 h-5 text-purple-400" />
+                          <Chrome className="w-5 h-5 text-purple-400" />
                         </div>
                         <div>
-                          <h4 className="text-purple-400 font-bold mb-1">Open Source</h4>
-                          <p className="text-sm text-gray-100">Showcase your work to the community</p>
+                          <h4 className="text-purple-400 font-bold mb-1">Official Website</h4>
+                          <p className="text-sm text-gray-100">Visit our main website for more information</p>
                         </div>
                       </motion.div>
                     </div>
@@ -893,10 +888,15 @@ function App() {
                       viewport={{ once: true }}
                       className="mt-8 flex justify-center md:justify-start"
                     >
-                      <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-red-500 hover:to-red-600 text-white px-6 py-3 rounded-md font-bold text-sm transition-all duration-300 flex items-center group">
+                      <a 
+                        href="https://forms.gle/2dBn4k3nFoYd6z8Y6"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-red-500 hover:to-red-600 text-white px-6 py-3 rounded-md font-bold text-sm transition-all duration-300 flex items-center group"
+                      >
                         Register Your Team
                         <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                      </button>
+                      </a>
                     </motion.div>
                   </div>
                 </motion.div>
@@ -1042,14 +1042,14 @@ function App() {
                   <a href="https://www.linkedin.com/company/ieee-kjsieit" className="hover:text-cyan-400 transition-colors">LinkedIn</a>
                 </li>
                 <li className="flex items-center gap-2">
-                  <Github className="h-5 w-5" />
-                  <a href="https://github.com/IEEE-KJSIEIT" className="hover:text-cyan-400 transition-colors">GitHub</a>
+                  <Chrome className="h-5 w-5" />
+                  <a href="#" className="hover:text-cyan-400 transition-colors">Website</a>
                 </li>
                 <li className="flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-pink-500" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073-4.949zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                   </svg>
-                  <a href="https://www.instagram.com/ieeekjsieit/" className="hover:text-cyan-400 transition-colors">Instagram</a>
+                  <a href="https://www.instagram.com/ieee.kjsit?igsh=MWJieHY3YXZ2NDVucA==" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">Instagram</a>
                 </li>
               </ul>
             </div>
@@ -1067,8 +1067,8 @@ function App() {
                   <p>+91 82374 55400</p>
                 </div>
                 <div>
-                  <p className="font-semibold">Shrikant Bhosle (Secretary)</p>
-                  <p>+91 77108 92864</p>
+                  <p className="font-semibold">Akash Adhyapak (CTO)</p>
+                  <p>+91 75172 75993</p>
                 </div>
               </div>
             </div>
@@ -1078,7 +1078,11 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 pt-6 sm:pt-8 mt-6 sm:mt-8 border-t border-gray-800 text-center text-xs sm:text-sm text-gray-400">
             <Terminal className="w-5 h-5 sm:w-6 sm:h-6 mx-auto mb-3 sm:mb-4 text-cyan-400" />
             <p>© 2025 AlgoForge - All Rights Reserved</p>
-            <p className="mt-1 sm:mt-2">Designed and Developed by Qasim Kharodia and Aliasghar Masood</p>
+            <p className="mt-3 sm:mt-4 text-sm sm:text-base font-medium">
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
+                Designed & Developed by Qasim Kharodia
+              </span>
+            </p>
           </div>
         </footer>
       </div>
