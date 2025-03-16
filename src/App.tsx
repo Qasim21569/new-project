@@ -5,6 +5,7 @@ import Background from './components/Background';
 import Timeline from './components/Timeline';
 import Domains from './components/Domains';
 import Guidelines from './components/Guidelines';
+import Prizes from './components/Prizes';
 
 function App() {
   const [timeLeft, setTimeLeft] = useState({
@@ -1016,6 +1017,7 @@ function App() {
 
         <Domains />
         <Timeline />
+        <Prizes />
         <Guidelines />
 
         {/* Footer */}
