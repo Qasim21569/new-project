@@ -5,7 +5,6 @@ import Background from './components/Background';
 import Timeline from './components/Timeline';
 import Domains from './components/Domains';
 import Guidelines from './components/Guidelines';
-import Prizes from './components/Prizes';
 
 function App() {
   const [timeLeft, setTimeLeft] = useState({
@@ -1017,7 +1016,6 @@ function App() {
 
         <Domains />
         <Timeline />
-        <Prizes />
         <Guidelines />
 
         {/* Footer */}
@@ -1080,10 +1078,17 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 pt-6 sm:pt-8 mt-6 sm:mt-8 border-t border-gray-800 text-center text-xs sm:text-sm text-gray-400">
             <Terminal className="w-5 h-5 sm:w-6 sm:h-6 mx-auto mb-3 sm:mb-4 text-cyan-400" />
             <p>© 2025 AlgoForge - All Rights Reserved</p>
-            <p className="mt-3 sm:mt-4 text-sm sm:text-base font-medium">
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
+            
+            {/* Enhanced developer credits with shimmer effect - no container */}
+            <p className="mt-3 sm:mt-4 text-sm sm:text-base font-bold relative inline-block overflow-hidden">
+              <span className="bg-gradient-to-r from-cyan-400 via-pink-500 to-red-500 to-cyan-400 bg-auto-200
+                           animate-dev-credit text-transparent bg-clip-text">
                 Designed & Developed by Qasim Kharodia
               </span>
+              
+              {/* Shine effect */}
+              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent 
+                          -translate-x-full hover:animate-shine pointer-events-none"></span>
             </p>
           </div>
         </footer>
