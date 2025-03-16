@@ -186,16 +186,6 @@ export default function Prizes() {
                 className="absolute inset-0 bg-gradient-to-b from-yellow-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               />
               
-              {/* Crown on top */}
-              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
-                <motion.div
-                  animate={{ y: [0, -3, 0] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
-                  <div className="text-yellow-400 text-3xl">👑</div>
-                </motion.div>
-              </div>
-              
               <div className="flex justify-center mb-4">
                 <div className="relative">
                   <Award className="w-14 h-14 text-yellow-400" />
