@@ -1,0 +1,43 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <rect width="64" height="64" rx="12" fill="url(#paint0_linear)" />
+  
+  <!-- Circuit board pattern -->
+  <path d="M12 20H52" stroke="#06B6D4" stroke-width="1" stroke-opacity="0.5" />
+  <path d="M12 32H52" stroke="#06B6D4" stroke-width="1" stroke-opacity="0.5" />
+  <path d="M12 44H52" stroke="#06B6D4" stroke-width="1" stroke-opacity="0.5" />
+  <path d="M20 12V52" stroke="#06B6D4" stroke-width="1" stroke-opacity="0.5" />
+  <path d="M32 12V52" stroke="#06B6D4" stroke-width="1" stroke-opacity="0.5" />
+  <path d="M44 12V52" stroke="#06B6D4" stroke-width="1" stroke-opacity="0.5" />
+  
+  <!-- Connection nodes -->
+  <circle cx="20" cy="20" r="2" fill="#06B6D4" />
+  <circle cx="32" cy="32" r="2" fill="#06B6D4" />
+  <circle cx="44" cy="44" r="2" fill="#06B6D4" />
+  <circle cx="44" cy="20" r="2" fill="#E11D48" />
+  <circle cx="20" cy="44" r="2" fill="#E11D48" />
+  
+  <!-- Code brackets - representing algorithms -->
+  <path d="M24 22L18 32L24 42" stroke="#06B6D4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M40 22L46 32L40 42" stroke="#E11D48" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Central A for AlgoForge -->
+  <path d="M32 18L38 46" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M32 18L26 46" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M28 34H36" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Glow effect -->
+  <rect x="1" y="1" width="62" height="62" rx="11" stroke="url(#paint1_linear)" stroke-width="2" />
+  
+  <!-- Definitions for gradients -->
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0F172A" />
+      <stop offset="1" stop-color="#1E293B" />
+    </linearGradient>
+    <linearGradient id="paint1_linear" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#06B6D4" />
+      <stop offset="1" stop-color="#E11D48" />
+    </linearGradient>
+  </defs>
+</svg> 
