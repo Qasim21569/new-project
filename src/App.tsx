@@ -144,32 +144,11 @@ function App() {
     // This is set to March 22, 2025 at 1 PM IST (7:30 UTC)
     const targetDate = new Date('2025-03-22T07:30:00Z').getTime();
     
-    // Force the current date to be before the target date for testing/display purposes
-    // This ensures the countdown shows properly even if system date is incorrect
+    // Force the countdown to zero since we're past the event date
     const updateTimer = () => {
-      // Use a date that's definitely before the hackathon for testing
-      const forcedCurrentDate = new Date('2025-03-15T00:00:00Z').getTime();
-      // Get actual current time as fallback
-      const now = new Date().getTime();
-      
-      // Use the forced date if system date is after target date (likely incorrect)
-      const currentTime = now > targetDate ? forcedCurrentDate : now;
-      const difference = targetDate - currentTime;
-
-      // Always show countdown if we're using the forced date
-      if (difference <= 0 && now <= targetDate) {
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        setCountdownComplete(true);
-        return;
-      }
-
-      // Calculate remaining time
-      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-      setTimeLeft({ days, hours, minutes, seconds });
+      // Set all countdown values to zero since the event has started
+      setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      setCountdownComplete(true);
     };
 
     updateTimer(); // Call once to prevent 1-second delay
